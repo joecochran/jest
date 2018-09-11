@@ -5,10 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-module.exports = {
-  plugins: [
-    // Cannot be `import` as this file is not compiled
-    require('babel-plugin-jest-hoist'),
-    require('babel-plugin-syntax-object-rest-spread'),
-  ],
+module.exports = function() {
+  return {
+    plugins: [
+      // Cannot be `import` as this file is not compiled
+      require('babel-plugin-jest-hoist'),
+      require('babel-plugin-syntax-object-rest-spread'),
+    ],
+  }
 };
